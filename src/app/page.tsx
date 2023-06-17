@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Header from '@/components/Header'
 
 export const metadata: Metadata = {
   title: '짤리우드',
@@ -6,8 +7,12 @@ export const metadata: Metadata = {
 }
 
 export default async function Home() {
-  const data = await getData()
-  return <div>main</div>
+  await getData()
+  return (
+    <div>
+      <Header />
+    </div>
+  )
 }
 
 async function getData() {
