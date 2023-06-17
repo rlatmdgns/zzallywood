@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-import getMemes from '@/services/getMemes/getMemes'
 
 import Header from '@/components/Header'
 import MemeModule from '@/modules/Meme'
@@ -17,5 +16,3 @@ export default async function Home() {
     </div>
   )
 }
-
-
