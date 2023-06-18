@@ -1,5 +1,5 @@
 import getMemes from "@/services/getMemes/getMemes";
-import MemeList from "./components/MemeItem/MemeItem";
+import MemeList from "./components/MemeList/MemeList";
 
 const MemeModule = async () => {
     const memes = await getMemes()

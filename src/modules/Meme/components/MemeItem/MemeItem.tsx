@@ -1,37 +1,21 @@
-import React, { useState } from 'react'
+'use client'
+import React from 'react'
+import * as Styles from './styles'
 
-interface Meme {
+interface MemeItemProps {
     id: number,
     filePath: string,
-    creator: string,
-    editor: string,
-    created: string,
-    edited: string
-}
-interface MemeListProps {
-    memes: Meme[]
 }
 
-
-const MemeList = ({
-    memes
-}: MemeListProps) => {
+const MemeItem = ({
+    id, filePath
+}: MemeItemProps) => {
     return (
-        <section>
-            <h3>아이돌 명</h3>
-            <ul>
-                {memes.map(photo => <li key={photo.id}>
-                    <button type="button">
-                        {photo.id}
-                    </button>
-                </li>)}
-            </ul>
-        </section>
+        <Styles.MemeItem type="button">
+            <Styles.MemeItemImage style={{backgroundImage: filePath}}></Styles.MemeItemImage>
+            {id}
+        </Styles.MemeItem>
     )
 }
-//     lists: Array<Memes>,
-// }) => {
-//     
-// }
 
-export default MemeList
+export default MemeItem
