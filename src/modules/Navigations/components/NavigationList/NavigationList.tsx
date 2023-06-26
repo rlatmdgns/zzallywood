@@ -7,7 +7,6 @@ import NavigationItem from '../NavigationItem/NavigationItem'
 interface NavigationItemProps {
   title: string,
   path: string,
-  type: string
 }
 
 interface navigationProps {

@@ -6,7 +6,6 @@ import * as Styles from './styles'
 interface NavigationItemProps {
     title: string,
     path: string,
-    type: string
 }
 
 const NavigationItem = ({ title, path }: NavigationItemProps) => {
