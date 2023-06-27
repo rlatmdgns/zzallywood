@@ -2,7 +2,6 @@ import { Metadata } from 'next'
 
 import Header from '@/components/Header'
 import MemeModule from '@/modules/Meme'
-import NavigationModule from '@/modules/Navigations'
 
 export const metadata: Metadata = {
   title: '짤리우드',
@@ -14,7 +13,6 @@ export default async function Home() {
     <div>
       <Header />
       <MemeModule />
-      <NavigationModule />
     </div>
   )
 }
