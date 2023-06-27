@@ -25,4 +25,9 @@ export const GlobalStyle = createGlobalStyle`
     background:none;
     border:none;
   }
+  
+  a {
+    color:inherit;
+    text-decoration:none;
+  }
 `
