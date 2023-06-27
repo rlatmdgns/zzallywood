@@ -11,6 +11,8 @@ export const unauthorizedHttp = {
     return unAuthAxios.put<Response>(url, data).then((res) => res.data)
   },
   delete: <Request = any, Response = unknown>(url: string, data: Request) => {
-    return unAuthAxios.delete<Response>(url, data).then((res) => res.data)
+    return unAuthAxios
+      .delete<Response>(url, { data: data })
+      .then((res) => res.data)
   },
 }

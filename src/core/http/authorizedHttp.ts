@@ -16,9 +16,9 @@ export const authorizedHttp = {
       .put<Response>(url, data)
       .then((res) => res.data)
   },
-  delete: <Request = any, Response = unknown>(url: string, data: Request) => {
+  delete: <Request, Response>(url: string, data: Request) => {
     return defaultAxios()
-      .delete<Response>(url, data)
+      .delete<Response>(url, { data: data })
       .then((res) => res.data)
   },
 }
