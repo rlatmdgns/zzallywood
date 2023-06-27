@@ -1,7 +1,4 @@
-'use client' 
-
 import { Metadata } from 'next'
-import Styled from 'styled-components'
 
 import Header from '@/components/Header'
 import MainContainer from '@/components/Main/MainContainer'
@@ -15,7 +12,7 @@ export default async function Home() {
   return (
     <div>
       <Header />
-      <MainContainer/>
+      <MainContainer />
     </div>
   )
 }
