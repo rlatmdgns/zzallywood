@@ -1,1 +1,1 @@
-export { default } from './Layerpopup'
+export { default } from './LayerPopup'
