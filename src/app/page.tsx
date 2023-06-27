@@ -1,7 +1,10 @@
+'use client' 
+
 import { Metadata } from 'next'
+import Styled from 'styled-components'
 
 import Header from '@/components/Header'
-import MemeModule from '@/modules/Meme'
+import MainContainer from '@/components/Main/MainContainer'
 
 export const metadata: Metadata = {
   title: '짤리우드',
@@ -12,7 +15,7 @@ export default async function Home() {
   return (
     <div>
       <Header />
-      <MemeModule />
+      <MainContainer/>
     </div>
   )
 }

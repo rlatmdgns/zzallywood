@@ -11,7 +11,11 @@ interface NavigationItemProps {
 const NavigationItem = ({ title, path }: NavigationItemProps) => {
     return (
         <Styles.NavigationItem>
-            <Link href={`/${path}`}>{title}</Link>
+            <Link href={`/${path}`}>
+              <Styles.NavigationText>
+              {title}
+            </Styles.NavigationText>
+            </Link>
         </Styles.NavigationItem>
     )
 }

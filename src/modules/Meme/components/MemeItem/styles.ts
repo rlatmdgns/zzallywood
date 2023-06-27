@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
-export const MemeItem = styled.button`
+export const MemeItem = styled.span`
   position: relative;
   width:100%;
+  text-align:center;
 `
 
 export const MemeItemImage = styled.i`
