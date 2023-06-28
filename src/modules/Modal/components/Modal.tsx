@@ -5,11 +5,11 @@ import React from 'react'
 
 interface ModalProps {
   title: string
-  // content?: React.ReactNode
+  children?: React.ReactNode
   onConfirm?: () => void
 }
 
-const Modal = ({ title }: ModalProps) => {
+const Modal = ({ title, children }: ModalProps) => {
   return (
     <Styles.ModalDim>
       <Styles.Modal>
@@ -17,7 +17,7 @@ const Modal = ({ title }: ModalProps) => {
           <Styles.ModalHeader>{title}</Styles.ModalHeader>  
           <Styles.ModalClose></Styles.ModalClose>
         </Styles.ModalHeading>
-        {/* <Styles.ModalContents>{content}</Styles.ModalContents> */}
+        <Styles.ModalContents>{children}</Styles.ModalContents>
       </Styles.Modal>
     </Styles.ModalDim>
   )
