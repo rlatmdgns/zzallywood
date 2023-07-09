@@ -29,6 +29,7 @@ export default function RootLayout({
             <NavigationModule />
           </ThemeProvider>
         </StyledComponentsRegistry>
+        <div id="modal"/>
       </body>
     </html>
   )

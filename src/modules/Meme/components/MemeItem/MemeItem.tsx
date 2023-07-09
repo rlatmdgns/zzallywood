@@ -11,14 +11,12 @@ interface MemeItemProps {
 
 const MemeItem = ({ id, filePath }: MemeItemProps) => {
   return (
-    <Link href={`/meme/${id}`}>
-      <Styles.MemeItem>
-        <Styles.MemeItemImage
-          style={{ backgroundImage: filePath }}
-        ></Styles.MemeItemImage>
-        {id}
-      </Styles.MemeItem>
-    </Link>
+    <Styles.MemeItem>
+      <Styles.MemeItemImage
+        style={{ backgroundImage: filePath }}
+      ></Styles.MemeItemImage>
+      {id}
+    </Styles.MemeItem>
   )
 }
 
