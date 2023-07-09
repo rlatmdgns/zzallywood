@@ -27,6 +27,7 @@ export default function RootLayout({
             {children}
           </ThemeProvider>
         </StyledComponentsRegistry>
+        <div id="modal"/>
       </body>
     </html>
   )
