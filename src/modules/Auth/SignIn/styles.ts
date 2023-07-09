@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import Link from 'next/link'
 
 export const Wrapper = styled.section`
   margin-top: 150px;
@@ -19,7 +18,7 @@ export const ButtonBox = styled.div`
   width: 400px;
   margin: 80px auto 0;
 `
-export const GoogleSignLink = styled(Link)`
+export const GoogleSignLink = styled.a`
   display: block;
   padding: 13px 12px;
   border: 1px solid #ccc;
