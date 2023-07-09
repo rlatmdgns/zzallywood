@@ -1,22 +1,11 @@
-export interface GetHomeResponse {
+import { Idols } from '@/services/getIdols/Idols.interface'
+import { Meme } from '@/services/getMemes/getMemes.interface'
+
+export interface GetHome {
   homeViews: HomeView[]
 }
 
 export interface HomeView {
-  memeViews: MemeView[]
-  idolView: IdolView
-}
-
-interface MemeView {
-  id: string
-  filePath: string
-  creator: string
-  editor: string
-  created: string
-  edited: string
-}
-
-interface IdolView {
-  id: string
-  name: string
+  memeViews: Meme[]
+  idolView: Idols
 }

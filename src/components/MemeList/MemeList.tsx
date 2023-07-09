@@ -12,9 +12,9 @@ interface MemeListProps {
 const MemeList = ({ memes }: MemeListProps) => {
   return (
     <Styles.MemeListWrap>
-      {memes?.map((photo) => (
-        <Styles.MemeList key={photo.id}>
-          <MemeItem id={photo.id} filePath={photo.filePath} />
+      {memes?.map((meme) => (
+        <Styles.MemeList key={meme.id}>
+          <MemeItem filePath={meme.filePath} />
         </Styles.MemeList>
       ))}
     </Styles.MemeListWrap>

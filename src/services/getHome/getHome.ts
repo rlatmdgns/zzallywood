@@ -1,9 +1,8 @@
-import { authorizedHttp } from '@/core/http'
-import { GetHomeResponse } from '@/services/getHome/getHome.interface'
+import { http } from '@/core/http'
+import { GetHome } from '@/services/getHome/getHome.interface'
 
-async function getHome(): Promise<GetHomeResponse> {
-  const result = await authorizedHttp.get('/')
-  return result.homeViews
+const getHome = () => {
+  return http.get<GetHome>('/')
 }
 
 export default getHome
