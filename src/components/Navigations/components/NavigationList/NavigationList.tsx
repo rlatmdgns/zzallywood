@@ -14,15 +14,17 @@ interface navigationProps {
 }
 
 const NavigationList = ({ navigations }: navigationProps) => {
-  const navigationItems = navigations.map((navItem) => (
-    <NavigationItem
-      title={navItem.title}
-      path={navItem.path}
-      key={navItem.title}
-    />
-  ))
-
-  return <Styles.NavigationWrap>{navigationItems}</Styles.NavigationWrap>
+  return (
+    <Styles.NavigationWrap>
+      {navigations.map((navItem) => (
+        <NavigationItem
+          title={navItem.title}
+          path={navItem.path}
+          key={navItem.title}
+        />
+      ))}
+    </Styles.NavigationWrap>
+  )
 }
 
 export default NavigationList

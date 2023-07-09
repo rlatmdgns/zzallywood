@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 
 import Header from '@/components/Header'
-import MainContainer from '@/components/Main/MainContainer'
-import NavigationModule from '@/modules/Navigations'
+import NavigationModule from '@/components/Navigations'
+import HomeModule from '@/modules/components'
 
 export const metadata: Metadata = {
   title: '짤리우드',
@@ -13,7 +13,7 @@ export default async function Home() {
   return (
     <div>
       <Header />
-      <MainContainer />
+      <HomeModule />
       <NavigationModule />
     </div>
   )
