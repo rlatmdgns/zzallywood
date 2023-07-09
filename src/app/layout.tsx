@@ -5,7 +5,6 @@ import StyledComponentsRegistry from '@/lib/registry'
 import { ThemeProvider } from 'styled-components'
 import Themes from '@/styles/theme'
 import { GlobalStyle } from '@/styles/globalStyle'
-import NavigationModule from '@/modules/Navigations'
 
 const notoSans = Noto_Sans_KR({
   weight: ['400', '500', '700'],
@@ -26,7 +25,6 @@ export default function RootLayout({
           <ThemeProvider theme={Themes}>
             <GlobalStyle />
             {children}
-            <NavigationModule />
           </ThemeProvider>
         </StyledComponentsRegistry>
         <div id="modal"/>
