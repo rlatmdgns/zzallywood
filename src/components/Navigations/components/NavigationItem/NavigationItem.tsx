@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import * as Styles from './styles'
+import Upload from '../../../Upload/index'
 
 interface NavigationItemProps {
   title: string
@@ -9,9 +10,6 @@ interface NavigationItemProps {
   type: string
 }
 
-const uploadImage = (event: React.ChangeEvent<HTMLInputElement>): void => {
-  console.log(event)
-}
 
 const NavigationItem = ({ title, path, type }: NavigationItemProps) => {
   return (
@@ -20,10 +18,7 @@ const NavigationItem = ({ title, path, type }: NavigationItemProps) => {
         <Link href={`/${path}`}>
           <Styles.NavigationText>{title}</Styles.NavigationText>
         </Link> :
-        <Styles.UploadButtonWrap>
-          <Styles.UploadInput id="upload_btn" type="file" onChange={uploadImage} />
-          <Styles.UploadButton htmlFor="upload_btn">{title}</Styles.UploadButton>
-        </Styles.UploadButtonWrap>
+        <Upload />
       }
     </Styles.NavigationItem >
   )
