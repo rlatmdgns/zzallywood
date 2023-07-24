@@ -14,10 +14,10 @@ const TeamPage = () => {
   return (
     <div>
       <Header />
-      <Suspense fallback={<></>}>
+      <Suspense fallback={<>...</>}>
         <MemberTab id={id} />
       </Suspense>
-      <Suspense fallback={<></>}>
+      <Suspense fallback={<>...</>}>
         {memberId ? <MemberMemes memberId={memberId} /> : <EntireMeme />}
       </Suspense>
     </div>
