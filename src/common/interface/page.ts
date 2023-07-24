@@ -1,3 +1,14 @@
+export interface Pagination {
+  pageable: Pageable
+  size: number
+  number: number
+  sort: Sort
+  numberOfElements: number
+  first: boolean
+  last: boolean
+  empty: boolean
+}
+
 export interface Pageable {
   offset: number
   sort: Sort

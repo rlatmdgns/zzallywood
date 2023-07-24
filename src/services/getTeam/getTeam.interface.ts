@@ -1,18 +1,10 @@
-import { Pageable, Sort } from '@/common/interface/page'
+import { Pagination } from '@/common/interface/page'
 
-export interface Teams {
-  size: number
-  content: Content[]
-  number: number
-  sort: Sort
-  numberOfElements: number
-  pageable: Pageable
-  first: boolean
-  last: boolean
-  empty: boolean
+export interface Teams extends Pagination {
+  content: TeamContent[]
 }
 
-export interface Content {
+export interface TeamContent {
   name: string
   id: number
   thumbnail: string

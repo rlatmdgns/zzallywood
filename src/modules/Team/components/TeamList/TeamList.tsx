@@ -2,19 +2,25 @@
 
 import React from 'react'
 import * as Styles from './styles'
-import TeamItem from '@/modules/Team/components/TeamItem'
-import { Content } from '@/services/getTeam/getTeam.interface'
+import { TeamContent } from '@/services/getTeam/getTeam.interface'
+import TeamItem from '@/common/components/TeamItem'
+import Link from 'next/link'
+import { PAGE } from '@/constants/pages'
 
 interface TeamListProps {
-  content: Content[]
+  content: TeamContent[]
 }
 
 const TeamList = ({ content: teams }: TeamListProps) => {
   return (
     <Styles.Wrap>
-      {teams?.map((team) => (
-        <TeamItem key={team.id} team={team} />
-      ))}
+      {teams?.map((team) => {
+        return (
+          <Link href={`${PAGE.TEAMS}/${team.id}`} key={team.id}>
+            <TeamItem team={team} />
+          </Link>
+        )
+      })}
     </Styles.Wrap>
   )
 }

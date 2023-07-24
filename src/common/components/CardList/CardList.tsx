@@ -13,7 +13,7 @@ const CardList = ({ memes }: MemeListProps) => {
   return (
     <Styles.Wrapper>
       {memes.map((meme) => (
-        <Card key={meme.id} />
+        <Card key={meme.id} meme={meme} />
       ))}
     </Styles.Wrapper>
   )

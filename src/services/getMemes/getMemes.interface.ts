@@ -1,4 +1,4 @@
-import { Pageable, Sort } from '@/common/interface/page'
+import { Pagination } from '@/common/interface/page'
 
 export interface Meme {
   id: number
@@ -11,14 +11,6 @@ export interface Meme {
   modifiedAt: string
 }
 
-export interface EntireMeme {
+export interface EntireMeme extends Pagination {
   content: Meme[]
-  pageable: Pageable
-  size: number
-  number: number
-  sort: Sort
-  numberOfElements: number
-  first: boolean
-  last: boolean
-  empty: boolean
 }
