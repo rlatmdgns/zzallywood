@@ -5,19 +5,18 @@ import * as Styles from './styles'
 import { Content } from '@/services/getTeam/getTeam.interface'
 import TeamItem from '@/common/components/TeamItem'
 import Link from 'next/link'
-import { PAGE } from '@/constants/pages'
 
-interface TeamListProps {
+interface MemberListProps {
   content: Content[]
 }
 
-const TeamList = ({ content: teams }: TeamListProps) => {
+const MemberList = ({ content: members }: MemberListProps) => {
   return (
     <Styles.Wrap>
-      {teams?.map((team) => {
+      {members?.map((member) => {
         return (
-          <Link href={`${PAGE.TEAMS}/${team.id}`} key={team.id}>
-            <TeamItem team={team} />
+          <Link href={`?memberId=${member.id}`} key={member.id} replace={true}>
+            <TeamItem team={member} />
           </Link>
         )
       })}
@@ -25,4 +24,4 @@ const TeamList = ({ content: teams }: TeamListProps) => {
   )
 }
 
-export default TeamList
+export default MemberList

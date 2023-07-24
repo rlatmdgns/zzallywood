@@ -2,9 +2,14 @@
 
 import React from 'react'
 import * as Styles from './styles'
+import { Meme } from '@/services/getMemes/getMemes.interface'
 
-const Card = () => {
-  return <Styles.Wrapper></Styles.Wrapper>
+interface CardProps {
+  meme: Meme
+}
+
+const Card = ({ meme }: CardProps) => {
+  return <Styles.Wrapper>{meme.id}</Styles.Wrapper>
 }
 
 export default Card

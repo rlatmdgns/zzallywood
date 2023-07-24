@@ -5,6 +5,7 @@ import StyledComponentsRegistry from '@/lib/registry'
 import styled, { ThemeProvider } from 'styled-components'
 import Themes from '@/styles/theme'
 import { GlobalStyle } from '@/styles/globalStyle'
+import { RecoilRoot } from 'recoil'
 
 const notoSans = Noto_Sans_KR({
   weight: ['400', '500', '700'],
@@ -31,7 +32,9 @@ export default function RootLayout({
         <StyledComponentsRegistry>
           <ThemeProvider theme={Themes}>
             <GlobalStyle />
-            <Wrapper>{children}</Wrapper>
+            <RecoilRoot>
+              <Wrapper>{children}</Wrapper>
+            </RecoilRoot>
           </ThemeProvider>
         </StyledComponentsRegistry>
         <div id="modal" />
