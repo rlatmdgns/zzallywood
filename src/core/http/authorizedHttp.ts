@@ -1,25 +1,51 @@
-import Axios from 'axios'
+const BASE_URL = process.env.NEXT_PUBLIC_API
 
-const API_URL = process.env.NEXT_PUBLIC_API
-
-const axios = Axios.create({
-  baseURL: API_URL,
-})
+async function handleResponse<T>(response: Response): Promise<T> {
+  if (!response.ok) {
+    throw new Error(`Network response was not ok: ${response.statusText}`)
+  }
+  return response.json()
+}
 
 export const http = {
-  get: function get<Response = unknown>(url: string) {
-    return axios.get<Response>(url).then((res) => res.data)
+  get: async <T = unknown>(url: string): Promise<T> => {
+    const response = await fetch(`${BASE_URL}${url}`)
+    return handleResponse<T>(response)
   },
-  post: function post<Request = any, Response = unknown>(
+
+  post: async <T = unknown, R = unknown>(url: string, data?: T): Promise<R> => {
+    const response = await fetch(`${BASE_URL}${url}`, {
+      method: 'POST',
+      headers: {
+        // Note: Content-Type header is automatically set by FormData
+      },
+      body: data instanceof FormData ? data : JSON.stringify(data),
+    })
+    return handleResponse<R>(response)
+  },
+
+  put: async <T = unknown, R = unknown>(url: string, data: T): Promise<R> => {
+    const response = await fetch(`${BASE_URL}${url}`, {
+      method: 'PUT',
+      headers: {
+        // Note: Content-Type header is automatically set by FormData
+      },
+      body: data instanceof FormData ? data : JSON.stringify(data),
+    })
+    return handleResponse<R>(response)
+  },
+
+  delete: async <T = unknown, R = unknown>(
     url: string,
-    data?: Request
-  ) {
-    return axios.post<Response>(url, { data }).then((res) => res.data)
-  },
-  put: <Request, Response = unknown>(url: string, data: Request) => {
-    return axios.put<Response>(url, data).then((res) => res.data)
-  },
-  delete: <Request, Response = unknown>(url: string, data: Request) => {
-    return axios.delete<Response>(url, { data }).then((res) => res.data)
+    data: T
+  ): Promise<R> => {
+    const response = await fetch(`${BASE_URL}${url}`, {
+      method: 'DELETE',
+      headers: {
+        // Note: Content-Type header is automatically set by FormData
+      },
+      body: data instanceof FormData ? data : JSON.stringify(data),
+    })
+    return handleResponse<R>(response)
   },
 }
