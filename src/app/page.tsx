@@ -4,6 +4,7 @@ import Header from '@/common/components/Header'
 import NavigationModule from '@/common/components/Navigations'
 import TeamModule from '@/modules/Team'
 import EntireMeme from '@/modules/EntireMeme'
+import React, { Suspense } from 'react'
 
 export const metadata: Metadata = {
   title: '짤리우드',
@@ -14,8 +15,12 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <TeamModule />
-      <EntireMeme />
+      <Suspense fallback={<></>}>
+        <TeamModule />
+      </Suspense>
+      <Suspense fallback={<></>}>
+        <EntireMeme />
+      </Suspense>
       <NavigationModule />
     </div>
   )

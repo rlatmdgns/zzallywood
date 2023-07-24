@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { Suspense } from 'react'
 import Header from '@/common/components/Header'
 import { useParams, useSearchParams } from 'next/navigation'
 import MemberTab from '@/modules/MemberTab'
@@ -14,8 +14,12 @@ const TeamPage = () => {
   return (
     <div>
       <Header />
-      <MemberTab id={id} />
-      {memberId ? <MemberMemes memberId={memberId} /> : <EntireMeme />}
+      <Suspense fallback={<></>}>
+        <MemberTab id={id} />
+      </Suspense>
+      <Suspense fallback={<></>}>
+        {memberId ? <MemberMemes memberId={memberId} /> : <EntireMeme />}
+      </Suspense>
     </div>
   )
 }
