@@ -8,6 +8,7 @@ interface MemberTabProps {
 
 const MemberTab = async ({ id }: MemberTabProps) => {
   const { content } = await getMembers(id)
+  console.log(await getMembers(id))
   return <MemberList content={content} />
 }
 

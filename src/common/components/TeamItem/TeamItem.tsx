@@ -2,10 +2,10 @@
 
 import React from 'react'
 import * as Styles from './styles'
-import { Content } from '@/services/getTeam/getTeam.interface'
+import { TeamContent } from '@/services/getTeam/getTeam.interface'
 
 interface TeamItemProps {
-  team: Content
+  team: TeamContent
 }
 
 const TeamItem = ({ team }: TeamItemProps) => {

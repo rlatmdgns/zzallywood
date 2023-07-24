@@ -2,12 +2,12 @@
 
 import React from 'react'
 import * as Styles from './styles'
-import { Content } from '@/services/getTeam/getTeam.interface'
 import TeamItem from '@/common/components/TeamItem'
 import Link from 'next/link'
+import { TeamContent } from '@/services/getTeam/getTeam.interface'
 
 interface MemberListProps {
-  content: Content[]
+  content: TeamContent[]
 }
 
 const MemberList = ({ content: members }: MemberListProps) => {

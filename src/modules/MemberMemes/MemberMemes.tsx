@@ -8,7 +8,8 @@ interface MemberTabProps {
 
 const MemberMemes = async ({ memberId }: MemberTabProps) => {
   const result = await getMemesByMember(memberId)
-  return <CardList memes={result.content} />
+  const memes = result.content[0].memes
+  return <CardList memes={memes} />
 }
 
 export default MemberMemes
