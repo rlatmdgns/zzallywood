@@ -1,10 +1,10 @@
 import React from 'react'
-import getTeam from '@/services/getTeam'
+import getTeams from '@/services/getTeam'
+import TeamList from '@/modules/Team/components/TeamList'
 
 const TeamModule = async () => {
-  const result = await getTeam()
-  console.log(result)
-  return <div>1</div>
+  const { content } = await getTeams()
+  return <TeamList content={content} />
 }
 
 export default TeamModule

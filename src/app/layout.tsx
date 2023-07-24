@@ -2,7 +2,7 @@
 
 import { Noto_Sans_KR } from 'next/font/google'
 import StyledComponentsRegistry from '@/lib/registry'
-import { ThemeProvider } from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
 import Themes from '@/styles/theme'
 import { GlobalStyle } from '@/styles/globalStyle'
 
@@ -12,6 +12,13 @@ const notoSans = Noto_Sans_KR({
   display: 'swap',
   subsets: ['latin'],
 })
+
+const Wrapper = styled.div`
+  max-width: 420px;
+  margin: 0 auto;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+`
 
 export default function RootLayout({
   children,
@@ -24,10 +31,10 @@ export default function RootLayout({
         <StyledComponentsRegistry>
           <ThemeProvider theme={Themes}>
             <GlobalStyle />
-            {children}
+            <Wrapper>{children}</Wrapper>
           </ThemeProvider>
         </StyledComponentsRegistry>
-        <div id="modal"/>
+        <div id="modal" />
       </body>
     </html>
   )

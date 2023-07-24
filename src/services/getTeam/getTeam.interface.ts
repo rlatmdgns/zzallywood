@@ -10,23 +10,10 @@ export interface Teams {
   empty: boolean
 }
 
-interface Meme {
-  id: number
-  image: string
-}
-
-interface Member {
+export interface Content {
   name: string
   id: number
   thumbnail: string
-}
-
-interface Content {
-  name: string
-  id: number
-  members: Member[]
-  thumbnail: string
-  memes: Meme[]
 }
 
 interface Sort {

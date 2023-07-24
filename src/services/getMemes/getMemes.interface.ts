@@ -1,8 +1,10 @@
 export interface Meme {
-  id: string
-  filePath: string
-  creator: string
-  editor: string
-  created: string
-  edited: string
+  id: number
+  memberId?: number
+  teamId?: number
+  createdBy: null | string
+  image: string
+  createdAt: string
+  modifiedBy: null | string
+  modifiedAt: string
 }
