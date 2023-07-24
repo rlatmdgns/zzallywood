@@ -15,7 +15,12 @@ const MemberList = ({ content: members }: MemberListProps) => {
     <Styles.Wrap>
       {members?.map((member) => {
         return (
-          <Link href={`?memberId=${member.id}`} key={member.id} replace={true}>
+          <Link
+            prefetch
+            href={`?memberId=${member.id}`}
+            key={member.id}
+            replace={true}
+          >
             <TeamItem team={member} />
           </Link>
         )
