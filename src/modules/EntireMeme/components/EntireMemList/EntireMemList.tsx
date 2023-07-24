@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import CardList from '@/components/CardList'
+import CardList from '@/common/components/CardList'
 import { Meme } from '@/services/getMemes/getMemes.interface'
 import * as Styles from './styles'
 

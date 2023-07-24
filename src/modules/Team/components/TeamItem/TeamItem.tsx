@@ -3,7 +3,7 @@
 import React from 'react'
 import * as Styles from './styles'
 import { Content } from '@/services/getTeam/getTeam.interface'
-import Thumbnail from '@/components/Thumbnail/Thumbnail'
+import Thumbnail from '@/common/components/Thumbnail/Thumbnail'
 
 interface TeamItemProps {
   team: Content

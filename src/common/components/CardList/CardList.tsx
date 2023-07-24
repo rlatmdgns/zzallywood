@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Meme } from '@/services/getMemes/getMemes.interface'
-import Card from '@/components/Card'
+import Card from '@/common/components/Card'
 import * as Styles from './styles'
 
 interface MemeListProps {
@@ -13,7 +13,7 @@ const CardList = ({ memes }: MemeListProps) => {
   return (
     <Styles.Wrapper>
       {memes.map((meme) => (
-        <Card key={meme.id} src={''} />
+        <Card key={meme.id} />
       ))}
     </Styles.Wrapper>
   )

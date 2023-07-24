@@ -1,4 +1,4 @@
-import NavigationModule from '@/components/Navigations'
+import NavigationModule from '@/common/components/Navigations'
 
 export default function MyPageLayout({
   children,
