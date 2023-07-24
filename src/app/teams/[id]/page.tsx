@@ -9,9 +9,7 @@ import MemberMemes from '@/modules/MemberMemes'
 const TeamPage = () => {
   const { id } = useParams()
   const searchParams = useSearchParams()
-
   const memberId = searchParams.get('memberId')
-  console.log(memberId)
 
   return (
     <div>
