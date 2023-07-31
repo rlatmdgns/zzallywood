@@ -12,7 +12,7 @@ const MemberTab = async ({ id }: MemberTabProps) => {
   return <div></div>
 }
 
-const getMembers = async (id) => {
+const getMembers = async (id: any) => {
   const res = await fetch(API_URL.TEAM_MEMBERS(id))
   return res.json()
 }
