@@ -29,15 +29,14 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={notoSans.className}>
-        <ThemeProvider theme={Themes}>
-          <GlobalStyle />
-          <RecoilRoot>
-            <StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          <ThemeProvider theme={Themes}>
+            <GlobalStyle />
+            <RecoilRoot>
               <Wrapper>{children}</Wrapper>
-            </StyledComponentsRegistry>
-          </RecoilRoot>
-        </ThemeProvider>
-
+            </RecoilRoot>
+          </ThemeProvider>
+        </StyledComponentsRegistry>
         <div id="modal" />
       </body>
     </html>
