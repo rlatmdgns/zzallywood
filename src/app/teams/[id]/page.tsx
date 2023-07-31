@@ -12,9 +12,7 @@ const TeamPage = () => {
   return (
     <div>
       <Header />
-      <Suspense fallback={<>...</>}>
-        <MemberTab id={id} />
-      </Suspense>
+      <MemberTab id={id} />
       {/*<Suspense fallback={<>...</>}>*/}
       {/*  {memberId ? <MemberMemes memberId={memberId} /> : <EntireMeme />}*/}
       {/*</Suspense>*/}
