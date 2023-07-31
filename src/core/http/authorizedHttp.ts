@@ -9,7 +9,7 @@ async function handleResponse<T>(response: Response): Promise<T> {
 
 export const http = {
   get: async <T = unknown>(url: string): Promise<T> => {
-    const response = await fetch(`${BASE_URL}${url}`, { cache: 'no-store' })
+    const response = await fetch(`${BASE_URL}${url}`)
     return handleResponse<T>(response)
   },
 
