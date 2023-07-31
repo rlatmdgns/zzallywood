@@ -1,6 +1,6 @@
-'use client'
 import React from 'react'
-import { API_URL } from '@/constants/apiUrl'
+import getMembers from '@/services/getMembers'
+import MemberList from '@/modules/MemberTab/MemberList'
 
 interface MemberTabProps {
   id: string
@@ -8,13 +8,6 @@ interface MemberTabProps {
 
 const MemberTab = async ({ id }: MemberTabProps) => {
   const { content } = await getMembers(id)
-  console.log(content)
-  return <div></div>
+  return <MemberList content={content} />
 }
-
-const getMembers = async (id: any) => {
-  const res = await fetch(API_URL.TEAM_MEMBERS(id))
-  return res.json()
-}
-
 export default MemberTab

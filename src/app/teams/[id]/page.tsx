@@ -2,16 +2,15 @@ import React from 'react'
 import Header from '@/common/components/Header'
 import MemberTab from '@/modules/MemberTab'
 
-const TeamPage = ({ params }: any) => {
+const TeamPage = ({ params, searchParams }: any) => {
   const { id } = params
-  console.log(id)
+  // const { memberId } = searchParams
+
   return (
     <div>
       <Header />
       <MemberTab id={id} />
-      {/*<Suspense fallback={<>...</>}>*/}
-      {/*  {memberId ? <MemberMemes memberId={memberId} /> : <EntireMeme />}*/}
-      {/*</Suspense>*/}
+      {/*{memberId ? <MemberMemes memberId={memberId} /> : <EntireMeme />}*/}
     </div>
   )
 }
