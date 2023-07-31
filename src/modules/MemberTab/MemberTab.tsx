@@ -1,6 +1,5 @@
 import React from 'react'
 import getMembers from '@/services/getMembers'
-import MemberList from '@/modules/MemberTab/MemberList'
 
 interface MemberTabProps {
   id: string
@@ -8,7 +7,8 @@ interface MemberTabProps {
 
 const MemberTab = async ({ id }: MemberTabProps) => {
   const { content } = await getMembers(id)
-  return <MemberList content={content} />
+  console.log(content)
+  return <div></div>
 }
 
 export default MemberTab

@@ -2,6 +2,7 @@
 import React from 'react'
 import Header from '@/common/components/Header'
 import { useParams, useSearchParams } from 'next/navigation'
+import MemberTab from '@/modules/MemberTab'
 
 const TeamPage = () => {
   const { id } = useParams()
@@ -11,9 +12,9 @@ const TeamPage = () => {
   return (
     <div>
       <Header />
-      {/*<Suspense fallback={<>...</>}>*/}
-      {/*  <MemberTab id={id} />*/}
-      {/*</Suspense>*/}
+      <Suspense fallback={<>...</>}>
+        <MemberTab id={id} />
+      </Suspense>
       {/*<Suspense fallback={<>...</>}>*/}
       {/*  {memberId ? <MemberMemes memberId={memberId} /> : <EntireMeme />}*/}
       {/*</Suspense>*/}
