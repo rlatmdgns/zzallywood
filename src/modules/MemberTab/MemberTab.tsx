@@ -10,5 +10,4 @@ const MemberTab = async ({ id }: MemberTabProps) => {
   const { content } = await getMembers(id)
   return <MemberList content={content} />
 }
-
 export default MemberTab

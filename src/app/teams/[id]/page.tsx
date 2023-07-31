@@ -1,22 +1,16 @@
-'use client'
 import React from 'react'
 import Header from '@/common/components/Header'
-import { useParams, useSearchParams } from 'next/navigation'
+import MemberTab from '@/modules/MemberTab'
+import TeamMemes from '@/app/teams/components/TeamMemes'
 
-const TeamPage = () => {
-  const { id } = useParams()
-  const searchParams = useSearchParams()
-  const memberId = searchParams.get('memberId')
-
+const TeamPage = ({ params, searchParams }: any) => {
+  const { id } = params
+  const memberId = searchParams?.memberId
   return (
     <div>
       <Header />
-      {/*<Suspense fallback={<>...</>}>*/}
-      {/*  <MemberTab id={id} />*/}
-      {/*</Suspense>*/}
-      {/*<Suspense fallback={<>...</>}>*/}
-      {/*  {memberId ? <MemberMemes memberId={memberId} /> : <EntireMeme />}*/}
-      {/*</Suspense>*/}
+      <MemberTab id={id} />
+      <TeamMemes memberId={memberId} />
     </div>
   )
 }
