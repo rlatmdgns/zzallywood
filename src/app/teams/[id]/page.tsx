@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '@/common/components/Header'
 import MemberTab from '@/modules/MemberTab'
 
-const TeamPage = ({ params }) => {
+const TeamPage = ({ params }: any) => {
   const { id } = params
   console.log(id)
   return (
