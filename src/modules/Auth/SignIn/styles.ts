@@ -15,8 +15,8 @@ export const Title = styled.h2`
   text-align: center;
 `
 export const ButtonBox = styled.div`
-  width: 400px;
-  margin: 80px auto 0;
+  width: calc(100% - 20px);
+  margin: 30px auto 0;
 `
 export const GoogleSignLink = styled.a`
   display: block;

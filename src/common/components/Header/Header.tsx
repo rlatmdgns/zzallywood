@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <Styles.Header>
       <Styles.Title>
-        <Link href="/">Zzallywood</Link>
+        <Link href="/">{process.env.NEXT_PUBLIC_SERVICE_TITLE}</Link>
       </Styles.Title>
     </Styles.Header>
   )

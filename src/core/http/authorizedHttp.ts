@@ -1,9 +1,9 @@
 const BASE_URL = process.env.NEXT_PUBLIC_API
 
 async function handleResponse<T>(response: Response): Promise<T> {
-  if (!response.ok) {
-    throw new Error(`Network response was not ok: ${response.statusText}`)
-  }
+  // if (!response.ok) {
+  //   throw new Error(`Network response was not ok: ${response.statusText}`)
+  // }
   return response.json()
 }
 

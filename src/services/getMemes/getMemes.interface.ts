@@ -7,8 +7,6 @@ export interface Meme {
   createdBy: null | string
   image: string
   createdAt: string
-  modifiedBy: null | string
-  modifiedAt: string
 }
 
 export interface EntireMeme extends Pagination {

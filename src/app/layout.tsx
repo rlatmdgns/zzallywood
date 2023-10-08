@@ -15,7 +15,6 @@ const notoSans = Noto_Sans_KR({
 })
 
 const Wrapper = styled.div`
-  max-width: 420px;
   margin: 0 auto;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
