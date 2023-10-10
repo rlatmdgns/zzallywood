@@ -10,6 +10,7 @@ const Header = () => {
       <Styles.Title>
         <Link href="/">{process.env.NEXT_PUBLIC_SERVICE_TITLE}</Link>
       </Styles.Title>
+      <Link href="/sign-in">로그인</Link>
     </Styles.Header>
   )
 }

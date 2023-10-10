@@ -7,7 +7,6 @@ import NavigationItem from '../NavigationItem/NavigationItem'
 interface NavigationItemProps {
   title: string
   path: string
-  type: string
 }
 
 interface navigationProps {
@@ -19,7 +18,6 @@ const NavigationList = ({ navigations }: navigationProps) => {
     <NavigationItem
       title={navItem.title}
       path={navItem.path}
-      type={navItem.type}
       key={navItem.title}
     />
   ))

@@ -2,19 +2,16 @@ import NavigationList from './components/NavigationList/NavigationList'
 
 const navigations = [
   {
-    title: 'home',
+    title: '홈',
     path: '/',
-    type: 'link',
   },
   {
-    title: 'upload',
+    title: '투표하기',
     path: '',
-    type: 'button',
   },
   {
-    title: 'mypage',
-    path: 'mypage',
-    type: 'link',
+    title: '로그인',
+    path: '/sign-in',
   },
 ]
 

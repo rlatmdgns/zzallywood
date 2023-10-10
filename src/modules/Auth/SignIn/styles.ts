@@ -8,12 +8,18 @@ export const Container = styled.div`
   width: 100%;
   flex-direction: column;
 `
-
 export const Title = styled.h2`
   width: 100%;
-  font-size: 70px;
+  margin-bottom:40px;
+  font-size: 30px;
   text-align: center;
 `
+export const MemberUtilWrap = styled.div`
+  display:flex;
+  justify-content: end;
+  padding:0 10px;
+`
+
 export const ButtonBox = styled.div`
   width: calc(100% - 20px);
   margin: 30px auto 0;

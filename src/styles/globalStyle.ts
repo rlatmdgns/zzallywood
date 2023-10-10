@@ -6,13 +6,14 @@ export const GlobalStyle = createGlobalStyle`
   html,
   body {
     overflow: hidden;
+    font-size:14px;
   }
 
   * {
     box-sizing: border-box;
   }
 
-  h1, h2, h3, h4, ul, li, button{
+  h1, h2, h3, h4, ul, li, p, button{
     margin:0;
     padding:0;
   }

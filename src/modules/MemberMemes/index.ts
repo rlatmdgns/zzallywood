@@ -1,1 +1,1 @@
-export { default } from './MemberMemes'
+export { default } from './RankingStarMemes'

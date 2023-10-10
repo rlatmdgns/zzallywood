@@ -6,7 +6,7 @@ interface MemberTabProps {
   memberId: string
 }
 
-const MemberMemes = async ({ memberId }: MemberTabProps) => {
+const RankingStarMemes = async () => {
   // const result = await getMemesByMember(memberId)
   // const memes = result.content[0].memes
 
@@ -15,8 +15,9 @@ const MemberMemes = async ({ memberId }: MemberTabProps) => {
     {
       id: 1,
       memberId: 11,
-      createdBy: '2002-01-01',
-      image: 'test',
+      image: 'img url',
+      title : '타이틀',
+      rankingAmt : 200,
       createdAt: '2002-01-01',
     }
   ]
@@ -24,4 +25,4 @@ const MemberMemes = async ({ memberId }: MemberTabProps) => {
   return <CardList memes={memes} />
 }
 
-export default MemberMemes
+export default RankingStarMemes

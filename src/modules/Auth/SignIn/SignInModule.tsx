@@ -3,16 +3,19 @@
 import React from 'react'
 import * as Styles from './styles'
 import LoginBox from './components/LoginBox/LoginBox'
+import Link from 'next/link'
 
 const SignInModule = () => {
   const GOOGLE = process.env.NEXT_PUBLIC_GOOGLE_API
-  const SERVICE_NAME = process.env.NEXT_PUBLIC_SERVICE_TITLE
 
   return (
     <Styles.Wrapper>
       <Styles.Container>
-        <Styles.Title>{SERVICE_NAME}</Styles.Title>
+        <Styles.Title>로그인</Styles.Title>
         <LoginBox/>
+        <Styles.MemberUtilWrap>
+          <Link href="sign-up">회원가입</Link>
+        </Styles.MemberUtilWrap>
         <Styles.ButtonBox>
           <Styles.GoogleSignLink href={GOOGLE}>
             Google 로그인
